@@ -6,7 +6,7 @@ import torch
 import torch.nn.functional as F
 from tqdm import tqdm
 
-from model.RISNet import RISNet
+from model.DABNet import DABNet
 from utils.dataloader import test_dataset  # 已是 RGB-only 版本
 
 # ----------------------------
@@ -27,7 +27,7 @@ for _data_name in ['CAMO' ]:
     os.makedirs(save_path, exist_ok=True)
 
     # 初始化模型
-    model = RISNet()
+    model = DABNet()
     model.load_state_dict(torch.load(opt.pth_path), strict=False)
     model.cuda()
     model.eval()
@@ -71,4 +71,5 @@ for _data_name in ['CAMO' ]:
         try:
             cv2.imwrite(save_file, res)
         except Exception as e:
+
             tqdm.write(f"[写入失败] {name} - {e}")
