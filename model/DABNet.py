@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-RISNet Variant: ONLY Module A advanced (DASM_V2 + AD-BiFPN_V2).
+DABNet Variant: ONLY Module A advanced (DASM_V2 + AD-BiFPN_V2).
 Module B is baseline (CBAM + ASPP refine). Includes C toggles (top-k / Gumbel) for DASM.
 
 Forward returns: (stage_pred_list, final_pred_logits_up_to_input_size)
@@ -338,9 +338,9 @@ class RFD(nn.Module):
     def forward(self, x): return x + self.body(x)
 
 # ==============================
-# RISNet (A-only advanced, B baseline)
+# DABNet (A-only advanced, B baseline)
 # ==============================
-class RISNet(nn.Module):
+class DABNet(nn.Module):
     def __init__(self, channel=48, kernel_size=3, reduction=4, bias=False, act_cls=nn.PReLU,
                  n_resblocks=2, iteration=3, pvt_ckpt_path: str = './pvt_v2_b2.pth',
                  dasm_topk=2, dasm_use_gumbel=True):
@@ -491,7 +491,7 @@ class RISNet(nn.Module):
 if __name__ == "__main__":
     torch.backends.cudnn.benchmark = True
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = RISNet(channel=48, iteration=3).to(device)
+    model = DABNet(channel=48, iteration=3).to(device)
     try:
         model = torch.compile(model)
         print("✅ torch.compile enabled")
