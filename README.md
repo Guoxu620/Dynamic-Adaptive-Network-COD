@@ -1,5 +1,5 @@
 #  Dynamic Adaptive Network for Precise Camouflaged Object Detection
-
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17680913.svg)](https://doi.org/10.5281/zenodo.17680913)
 # 📦 1. Environment Setup
 
 ### **1.1 Create Conda Environment**
