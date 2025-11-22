@@ -110,7 +110,7 @@ def eval(args, dataset):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", default='RISNet')
+    parser.add_argument("--model", default='DABNet')
     parser.add_argument("--pred_root", default='./results')
     parser.add_argument("--GT_root", default='../')
     parser.add_argument("--record_path", default='output/eval_record.txt')
