@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17681453.svg)](https://doi.org/10.5281/zenodo.17681453)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17681454.svg)](https://doi.org/10.5281/zenodo.17681454)
 
 This repository provides the official implementation of the paper
 **"Dynamic Adaptive Network for Precise Camouflaged Object Detection"**,
