@@ -1,11 +1,11 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17680913.svg)](https://doi.org/10.5281/zenodo.17680913)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17681453.svg)](https://doi.org/10.5281/zenodo.17681453)
 
 This repository provides the official implementation of the paper
 **"Dynamic Adaptive Network for Precise Camouflaged Object Detection"**,
 which is currently submitted to *The Visual Computer*.
 
 The archived version of this code is permanently available at
-https://doi.org/10.5281/zenodo.17680913. Readers are kindly reminded that this
+https://doi.org/10.5281/zenodo.17681453. Readers are kindly reminded that this
 repository is directly related to the above manuscript, and we encourage you to
 cite the manuscript when using this code or related results.
 # 📦 1. Environment Setup
