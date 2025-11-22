@@ -17,7 +17,7 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 
 from utils.utils import clip_gradient
-from model.RISNet import RISNet
+from model.DABNet import DABNet
 from metrics import Smeasure
 
 
@@ -302,12 +302,12 @@ def main():
         filename=os.path.join(opt.save_path, 'log.log'),
         format='[%(asctime)s-%(filename)s-%(levelname)s:%(message)s]',
         level=logging.INFO, filemode='a', datefmt='%Y-%m-%d %I:%M:%S %p')
-    logging.info("RISNet RGB-Only Training (with data augmentation on train set)")
+    logging.info("DABNet RGB-Only Training (with data augmentation on train set)")
 
     seed_everything(opt.seed)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = RISNet().to(device)
+    model = DABNet().to(device)
 
     # Optimizer
     if opt.optimizer == 'Adam':
