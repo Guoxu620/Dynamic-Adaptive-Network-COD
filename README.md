@@ -133,7 +133,7 @@ Evaluate predictions using standard COD metrics (S-measure, MAE, E-measure, F-me
 
 ```
 python eval.py \
-    --model RISNet \
+    --model DABNet \
     --pred_root ./results \
     --GT_root ../TestDataset \
     --record_path output/eval_record.txt \
